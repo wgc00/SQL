@@ -65,7 +65,8 @@
        id int,
        stringName varchar(225)
      );
-
+     
+     -- 切换结尾字符
      delimiter //
      -- 创建一个随机字符串的函数
      drop function if exists randStrs;
