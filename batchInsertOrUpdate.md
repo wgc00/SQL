@@ -24,10 +24,10 @@
 
 	<update id="batchModifyOrderByStatus" parameterType="java.util.List">
         	<foreach collection="list" item="item" index="index" close=";" open="" separator=";">
-            	 update `cs_order`
+            	update `cs_order`
            	 <set>
                 	<if test="item.status >= 0">
-                  	`order_status` = #{item.status, jdbcType=TINYINT},
+                  		`order_status` = #{item.status, jdbcType=TINYINT},
                 	</if>
               		`order_updated_time` = #{item.updatedTime, jdbcType=TIMESTAMP},
             	</set>
