@@ -22,22 +22,18 @@
 					
 ### 批量更新	
 
-	<update id="updateByPrimaryKey" parameterType="com.cateringsystem.entity.order.Order">
-		update cs_order
-		<set>
-			order_status = #{record.status},
-			order_payment = #{record.payment},
-			order_quantity = #{record.quantity},
-			order_Total_price = #{record.totalPrice},
-			<if test="record.sendTime != null">
-				order_send_time = #{record.sendTime},
-			</if>
-			<if test="record.eneTime != null">
-				order_ene_time = #{record.eneTime},
-			</if>
-			order_updated_time = #{record.updatedTime}
-		</set>
-		<where>
-			user_id = #{record.user.id} or order_Recipient = #{record.recipient}
-		</where>
-	</update>
+	<update id="batchModifyOrderByStatus" parameterType="java.util.List">
+        	<foreach collection="list" item="item" index="index" close=";" open="" separator=";">
+            	update `cs_order`
+           	 <set>
+                	<if test="item.status >= 0">
+                  	  `order_status` = #{item.status, jdbcType=TINYINT},
+                	</if>
+              		`order_updated_time` = #{item.updatedTime, jdbcType=TIMESTAMP},
+            	</set>
+           	<where>
+               		`order_Recipient` = #{item.recipient, jdbcType=INTEGER}
+                	and `order_id` = #{item.id, jdbcType=INTEGER}
+            	</where>
+        	</foreach>
+    	</update>
