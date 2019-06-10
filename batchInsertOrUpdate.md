@@ -36,4 +36,4 @@
                 	and `order_id` = #{item.id, jdbcType=INTEGER}
             	</where>
         	</foreach>
-    	</update>
+    </update>
