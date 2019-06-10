@@ -24,7 +24,7 @@
 
 	<update id="batchModifyOrderByStatus" parameterType="java.util.List">
         	<foreach collection="list" item="item" index="index" close=";" open="" separator=";">
-            	update `cs_order`
+            update `cs_order`
            	 <set>
                 	<if test="item.status >= 0">
                   		`order_status` = #{item.status, jdbcType=TINYINT},
