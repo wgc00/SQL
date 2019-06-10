@@ -37,3 +37,9 @@
             	</where>
         	</foreach>
     </update>
+
+
+### 数据库连接
+	
+	-- 数据库连接一定是这样写，不然批量插入数据无效 
+	jdbc:mysql://localhost:3306/cateringsystemdb?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true
