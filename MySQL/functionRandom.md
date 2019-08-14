@@ -50,8 +50,11 @@
          	end while ;
        	end//
 
-     -- 删除进入死循环的表
-     -- select count(*) from randString;
+
+
+
+  	-- 删除进入死循环的表
+     	-- select count(*) from randString;
 
    	-- 关闭事务
      	set autocommit = 0;
