@@ -31,11 +31,11 @@
 		return return_str;
        	 end //
 
-     delimiter //
-
+    
 
 ## 2、使用存储过程创建随机数
 	
+	delimiter //
     	drop procedure if exists proc_randString;
      	create procedure proc_randString(num int)
       	begin
