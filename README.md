@@ -44,7 +44,7 @@
 	
 [3、存储过程的使用](https://github.com/wgc00/SQL/blob/master/MySQL/procedure.md)
 
-[4、表的导入导出](https://github.com/wgc00/SQL/blob/master/MySQL/tableImportAndExport)
+[4、表的导入导出](https://github.com/wgc00/SQL/blob/master/MySQL/tableImportAndExport.md)
 	
 [5、表名的更新](https://github.com/wgc00/SQL/blob/master/MySQL/tableNameUpdate.md)
 
