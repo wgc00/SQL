@@ -36,16 +36,16 @@
 
 ## MyBatis
 
-[1、批量插入、更新数据] (https://github.com/wgc00/SQL/blob/master/MyBatis/batchOperating.md)
+[1、批量插入、更新数据](https://github.com/wgc00/SQL/blob/master/MyBatis/batchOperating.md)
 
 ## MySQL
 	
 [2、MySQL函数创建随机数](https://github.com/wgc00/SQL/blob/master/MySQL/functionRandom.md)
 	
-[3、存储过程的使用] (https://github.com/wgc00/SQL/blob/master/MySQL/procedure.md)
+[3、存储过程的使用](https://github.com/wgc00/SQL/blob/master/MySQL/procedure.md)
 
-[4、表的导入导出] (https://github.com/wgc00/SQL/blob/master/MySQL/tableImportAndExport)
+[4、表的导入导出](https://github.com/wgc00/SQL/blob/master/MySQL/tableImportAndExport)
 	
-[5、表名的更新] (https://github.com/wgc00/SQL/blob/master/MySQL/tableNameUpdate.md)
+[5、表名的更新](https://github.com/wgc00/SQL/blob/master/MySQL/tableNameUpdate.md)
 
 ## PostgreSQL
