@@ -54,7 +54,7 @@
 		<foreach collection="list" index="index" item="item" separator="," open="(" close=")">
             		#{item.attendUserId}
         	</foreach>
-    	</update>
+    </update>
 
 ### 数据库连接
 	
