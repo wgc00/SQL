@@ -20,7 +20,7 @@
 		</foreach>
 	</insert>
 					
-### 批量更新	
+### 批量更新(多次执行 update)	
 
 	<update id="batchModifyOrderByStatus" parameterType="java.util.List">
         	<foreach collection="list" item="item" index="index" close=";" open="" separator=";">
@@ -38,6 +38,23 @@
         	</foreach>
     </update>
 
+### 批量更新(只执行一次 update)
+
+	 <update id="updateBatch" parameterType="java.util.List">
+        	update pms_attend_user_association
+        	set attend_user_updated_time = now(),
+        	is_deprecat =
+       	 	<foreach collection="list" item="item" index="index" separator=" " open="case" close="end">
+			
+          		 when attend_user_id = #{item.attendUserId} then #{item.deprecat}
+        	</foreach>
+		
+        	where attend_user_id in
+        	
+		<foreach collection="list" index="index" item="item" separator="," open="(" close=")">
+            		#{item.attendUserId}
+        	</foreach>
+    	</update>
 
 ### 数据库连接
 	
